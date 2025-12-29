@@ -1,0 +1,39 @@
+# P6 Database Analyzer Configuration
+
+# Logging configuration
+logging:
+  level: INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  json: false  # Use JSON format for logs
+  log_dir: logs
+  max_bytes: 10485760  # 10MB
+  backup_count: 5
+
+# Database connection settings
+database:
+  connection_timeout: 30  # seconds
+  query_timeout: 300  # seconds
+  retry_attempts: 3
+  retry_delay: 1  # seconds
+  # TLS/SSL settings (when implemented)
+  tls_enabled: false
+  tls_verify: true
+
+# Analysis settings
+analysis:
+  timeout: 3600  # seconds (1 hour)
+  parallel: false  # Enable parallel analysis execution
+  cache_enabled: true
+  cache_ttl: 3600  # seconds (1 hour)
+
+# Security settings
+security:
+  credential_storage: keyring  # keyring or encrypted_file
+  tls_enabled: false
+  tls_verify: true
+
+# Report settings
+reports:
+  default_format: html  # html or pdf
+  include_charts: true
+  include_recommendations: true
+

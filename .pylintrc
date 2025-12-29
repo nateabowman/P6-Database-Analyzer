@@ -1,0 +1,27 @@
+[MASTER]
+ignore=venv,env,.venv
+jobs=0
+
+[MESSAGES CONTROL]
+disable=
+    C0111,  # missing-docstring
+    C0103,  # invalid-name
+    R0903,  # too-few-public-methods
+    R0913,  # too-many-arguments
+
+[FORMAT]
+max-line-length=120
+indent-string='    '
+
+[BASIC]
+good-names=i,j,k,ex,Run,_,id,db,pd,df
+
+[DESIGN]
+max-args=7
+max-locals=20
+max-returns=6
+max-branches=15
+
+[IMPORTS]
+ignore-imports=yes
+
